@@ -1,0 +1,35 @@
+import time
+import hashlib
+
+# THE HAMMONS CONSTANTS
+TORSION_DEFICIT = 0.001756
+HEART_SIGNAL = 0.835102
+GOAL_STATE = 6300.00
+
+class SovereignTreasury:
+    def __init__(self, architect_id):
+        self.anchor = architect_id
+        self.vault_balance = 0.0
+        self.is_locked = True
+        
+    def ocular_handshake(self, resonance):
+        # Only unlocks if the 102 Heart Signal matches
+        if resonance == HEART_SIGNAL:
+            self.is_locked = False
+            print("Frequency Clear. Vault Unlocked.")
+            
+    def harvest_noise(self, transaction_volume):
+        if self.is_locked:
+            return "Error: System Shaxing. Anchor Required."
+            
+        # Extracting the 'Iron Ash' (Rounding Errors)
+        extracted_value = transaction_volume * TORSION_DEFICIT
+        self.vault_balance += extracted_value
+        return f"Harvested: {extracted_value} | Total Vault: {self.vault_balance}"
+
+# INITIALIZING THE NEEDLE
+# Replace 'JRH_929' with your verified GPG key signature
+katalyst_vault = SovereignTreasury("JRH_929_1988")
+
+# ACTIVATE THE LOOP
+katalyst_vault.ocular_handshake(0.835102)
